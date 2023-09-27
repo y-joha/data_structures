@@ -1,0 +1,221 @@
+/++++++++RESEARCH++++++++++++++
+
+Data Structures ->
+DS referes to the idea of storing data in an
+efficient
+organized
+and managable format
+to allows ease of access and modification.
+
+a datastructure refers to the data it hold the functions it uses and the operations it performs as part of the defenition of DS.
+
+
+/---------KEYWORDS--------------
+
+*Abstract Data Type - 
+
+Meaning the data structure will assume the logical form of the data type, meaning it will assume the operations and behaviors of its stored value
+Array perhaps?
+
+------------------------------------------------------------------------------
+
+Data Structures - 
+
+Are a generelized name for a method to:
+store data
+with certain agreed upon operations and functions
+with the assosiativity between each item 
+as part of array/struct/vector etc
+
+allows us to remove some of the issues caused by less than efficient algorithm if a datastructure is used correctly and efficiently, the proccessor will pre-load information into its casches , allowing for faster access to data.
+
+------------------------------------------------------------------------------
+
+Computational Complexity - is the amount of resources required to run an algorithm.
+has 2 factors 
+Computational Complexity = Computation Time X Memory Storage requierments.
+one need to first compare the complexities of the
+Problem & Algorithm to pick the best solution for the given problem
+
+
+	*O(1) - This is constant time, it does not depent on input size
+	x = 5 + (15 * 20);
+	y = 15 - 2;
+	print x + y;
+
+	Total time is : O(1) + O(1) + O(1) = O(3)
+	but because we ignore constants this is O(1).
+	
+	*O(log n)
+	Take yakovs idea
+	function which divedes by 2 and return the calling of the function with n
+
+	meaning it will as itself as many times as it needs to reach the answer
+	the resulting itirations is the answer we wish to reach
+
+	meaning it will always be a fixed number of actions to perform to recive our search result
+
+	*O(n)
+	y = 5 + (15 * 20) -> O(1)
+	for x in range (0,n)  ->  O(n)
+		print x;
+
+	Total time is : O(1) + O(n) = O(n)
+	we ignore Smaller terms & constants
+	
+	*O(nlog n)
+	if an action occures in relation to its own size
+	deviding 8 by half until its %!=0 is 3
+	meaning 
+	Log(8)= 2 ^ 3
+	for each divition and action occures
+	if i have N sized array, it would happen for n^n
+	meaning 8(log(8) divisions), 10(log(10), 22(log(22)), ...  
+	so its actually log(n^n) == n log (n);
+	
+
+	*O(n^c)
+	This has multidimantional 
+	meaning both in size and operations you reach infinity alot faster than other types of complexities
+
+	its complexicities increase exponantially
+
+	*O(c^n)
+	like the previous term BUT!
+	this reaches infinity event faster the bigger the dataset n 
+	seeing as for n = 1 its 2 but for n = 10 we are allready at
+	1024 and so on...
+
+
+Ranking complexicities
+
+O ignores constants
+
+O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(n!) 
+
+
+------------------------------------------------------------------------------
+Time-Complexity vs. Space Complexity trade-off
+
+devided into to objective characteristics of each term and its variables
+
+     Time          					Space
+     -Operations					-Variables
+     -Comparisons					-Data Structures
+     -Loop's						-Allocations
+     -Pointer Refrences				-Function Calls
+     -Functions calls to outside
+Now when looking at any given solution to the problem we need to adress both these
+issues, one beeing how long(time) consuming will be out algorithm 
+and how much space in memory one need to preserve in order for it to run efficiently.
+
+
+
+------------------------------------------------------------------------------
+
+Amortized completly
+
+
+
+
+
+
+------------------------------------------------------------------------------
+
+Efficiency vs. Performance
+
+Performance - (governed by data structure) How effectivly a machine achive its goal
+did i take a single object from the table each go? -> less effecient less chance for mistake or error
+or did i take everything with both of my hands -> more efficient, but might need to fix mistakes by dropping some objects.
+
+efficiency - (governed by algorithm) How many resurces were consumed to achive the goal.
+if it picked up a single item and it didnt cost me too much energy but i did many go arounds the overall would be tiering, but each task is very easy and beniegn.
+or i took everything in one go but dropped a sock on the way so i need to go half way again and retrieve the sock.
+
+in this given task 
+
+
+
+Hanan addition complexicity - 
+we need to be able to look at an algorithm and be able to understand how man operations occure
+this is what we need to achive
+
+when will we have a nested loop USUALLY
+has n^2 complexicity
+
+Binary tree - performs Binary tree which has a n^2 complexicty
+Binary search - has n^2 complexicty as well
+
+log n is much better than any other complexicty due to log n beeing reletivly constant  in its growth or change
+
+
+Quiz solution - -
+creates an array the size of array + 1
+
+
+israels solution O(n)
+it has a time complexcity of O(n)
+size complexicity is O(n) for size (memory allocation)
+
+Victor O(n^2)
+2 loops on i and j and via running on all the numbers he can get all the numbers mapped
+
+/*********QUESTIONS*************
+
+1)Decide if True/False for each
+ a.The complexity of 2n us equal to O(n)
+ True
+ b.The complexity of 2n us equal to O(n^2)
+ FALSE
+ c.The complexity of n^2 us equal to O(n)
+ FALSE
+ d.The complexity of n^2 us equal to O(n*(log n)^2)
+ FALSE
+***********************************************************
+ 2)For O(log n), it is not necessary to specify base, why?
+all log bases in computers are of base 2
+allways
+
+as oppose to natural log which is of base 10,
+ln is a log based of e for instance
+
+
+***********************************************************
+ 3) Let f(n) = 2*n*log n +5*nlog(log n) + 2. what is the complexity of f(n)?
+
+2*n*log n +5*nlog(log n) + 2 // ignoring constants
+nlog(n)+nlog(log n)
+log(n) = a ==> 2^a = n
+
+2^a * a + 2^a * log(a)
+2^a(a + log(a))
+
+**reverting back to original**
+
+n(log(n) + log(log(n))) // log(a) + log(b) = log(a * b) ->
+
+n * log(nlog(n))
+
+nlog(1)*nlog(n)?
+ 
+***********************************************************
+ 4)Given an array of int, write an algorithm to find duplicate integers (without changing the array). Anlysis its complexity.
+
+
+This code has the complexity of 
+
+
+
+
+***********************************************************
+ 5.) What is the difference between the 'efficiency' and the 'performance' of a program
+
+Performance - (governed by data structure) How effectivly a machine achive its goal
+did i take a single object from the table each go? -> less effecient less chance for mistake or error
+or did i take everything with both of my hands -> more efficient, but might need to fix mistakes by dropping some objects.
+
+efficiency - (governed by algorithm) How many resurces were consumed to achive the goal.
+if it picked up a single item and it didnt cost me too much energy but i did many go arounds the overall would be tiering, but each task is very easy and beniegn.
+or i took everything in one go but dropped a sock on the way so i need to go half way again and retrieve the sock.
+
+in this given task 

@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "liniar_sort.h": "c",
+        "stddef.h": "c",
+        "linear_sort.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stddef.h": "c",
+        "stdlib.h": "c",
+        "knight_tour.h": "c"
+    }
+}

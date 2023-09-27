@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "liniar_sort.h": "c",
+        "stddef.h": "c",
+        "linear_sort.h": "c",
+        "string.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/yohai/yohai.azoulai/arch/linux64/bin/Debug",
+            "binaryPath": "/home/yohai/yohai.azoulai/arch/linux64/bin/Debug/recursion.out",
+            "binaryArgs": []
+        }
+    ]
+}

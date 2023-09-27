@@ -1,0 +1,92 @@
+
+Data structures
+Vector
+
+Research : 
+
+** Vector:
+https://www.tutorialspoint.com/how-does-a-vector-work-in-c-cplusplus#:~:text=A%20vector%20data%20structure%20is,the%20requirement%20of%20the%20user.
+
+The main casepoint is that Vectors could change dynamiclly
+after compilation based on user needs.
+unlike arrays which are set in memory on compilation virtually making them static.
+
+This requires the arry to copy content into new location, but are actully programmed to use same mem if possiable.
+
+ 
+** dynamic vector:
+
+dynamicly sized array
+
+a dynamic vector is the use of realloc and maloc with shrink size, meaning at any point the user can define the array size needed by the program and a shrink function allows him to have it most efficiently
+
+Keywords
+1.)Direct access (Random access) -
+random access - is the term refered to the fact that you can reach any point in memory (random located) at the same time
+
+direct access - comes from the fact that it doesnt matter where in an array its located you can access it directly
+eg. arrays (structures and dynamic arrays(vector) this is usfull for integer sorting and binary search
+
+Geometric expantion - 
+is a term expanded by a factor rather than a diffrence
+this has the walls expand and a plane is beeing filled in between them, basicly growing by volume not by size of side(as in a cube)
+[o(1) + o(n)]
+/
+[N+1]
+
+======
+O(1) -> Of amortize
+
+Grows on demand - is reffering to the dynamic allocation while the proccess is running, by creation the functions with a rule of expantion built in whithin them you can create a software which could run and perform while memory is available to run
+
+Growth Factor - the amount in which you will extand you currently allocated memory size
+this is debatable due to memory waste/ aloritem complexety
+this boiles down to conventions per language
+
+Amortize Complexity -
+this referse to the cost of the algoritem itself which in turn can effect the growth factor, 
+if the algoritem is very efficient but wastes CPU cycles you would extend scarsly (to prevent it to run on multiple NULL mem locations)
+
+and if its less efficient but get's the relevent job done this allows for a more generuse growthfactor for the memory "needed"
+
+
+
+
+
+
+Questions
+Interviewer Kobi;
+
+1.) by using malloc & realloc we can create an array with varing size past compilation phase, without programmers input
+
+2.)arr has
+specificdata type can be use in pointer arithmatic to reach every cell in memory
+dynamic can have a diffrent vector struct to place diffrent types of datatypes
+
+
+arr - aloocated in compilation and in a straight memory allocations
+dynamic - is heap allocated and not neccerily in alignment, and need byte specific locations to traverse
+
+arr - will take smaller finite size 
+dynamic -  can expande till the virtuall edge of memory.
+
+get a better understanding of ammortiziest
+this value is for instance in case of VectorReserve -> 
+
+3.) **the code will try to read from a place in the heap which he doesnt have access to, leading to undifiend behavior.**
+RR : If we will try to reach an outer index in the vector we actually use a wrapper, and the vector will be expended upon it
+thus this is not undifined behavior
+
+4.) has to possiable results
+if no need to expand memory -> this is a O(1) complexity , each action
+occure on single elemnt (const)
+in case the cartrige is full and need realloc
+this has complexity of O(n) -> this due to realloc memoving entier memory blocks.
+
+5.) growth factor was dicided to occure when vector size reached capacity
+factor decided in this case was decide by 2, but further case based analysis is required to calculatte correct factor per case.
+
+6.)no realloc doesnt allways succed but it would preferblly still malloc same location, and just expande onwards, but if this isnt that case, it will copy its entier memory stored into avacant location with requested amounts of memory. if no place like this is found, realloc will fail and return NULL pointer.
+
+
+

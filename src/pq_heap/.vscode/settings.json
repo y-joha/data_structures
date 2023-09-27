@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stddef.h": "c",
+        "stdlib.h": "c",
+        "pq_heap.h": "c",
+        "pri_queue.h": "c",
+        "uid.h": "c"
+    }
+}
